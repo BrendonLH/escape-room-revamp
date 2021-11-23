@@ -1,4 +1,5 @@
 import PlayerForm from "./pages/mainPage/playerForm.js";
+import "./pages/mainPage/main.scss";
 
 function App() {
   return (
