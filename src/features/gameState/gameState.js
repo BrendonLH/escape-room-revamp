@@ -3,7 +3,8 @@ import { createSlice } from "@reduxjs/toolkit";
 export const gameSlice = createSlice({
   name: "game",
   initialState: {
-    playerName: "",
+    // setup random name generator for players with no name input
+    playerName: "Guest",
     score: 0,
     riddles: []
   },
