@@ -1,5 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { addPlayer, addRiddles } from "../../features/gameState/gameState.js";
+import "./main.scss";
 // const url = "https://catfact.ninja/fact";
 const riddleURL = "https://escape-room-server.herokuapp.com/riddles";
 
@@ -16,7 +17,7 @@ function PlayerForm() {
       .then((data) => dispatch(addRiddles(data)));
   }
   return (
-    <div>
+    <div className="playerForm">
       <form>
         <input
           required
