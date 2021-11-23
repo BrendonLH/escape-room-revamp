@@ -1,3 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Eater&display=swap');
+
 .App {
+  font-family: 'Eater', cursive;
+  h1 {
+    font-size: 5em;
+  }
+  .howTo {
+    font-size: 2em;
+    h3{
+      text-align: center;
+    }
+    li {
+      list-style-type: none;
+    }
+  }
+  .playerForm {
+    display: flex;
+    flex-direction: column;
+    input {
+      text-align: center;
+      border-style: none;
+  }
+}
+
   height: 100vh;
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (max-width: 500px) {
+  .App {
+    h1{
+      font-size: 2em;
+    }
+    .howTo {
+      font-size: 1em;
+      text-align: center;
+    }
+  }
 }
