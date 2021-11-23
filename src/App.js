@@ -1,10 +1,10 @@
+import PlayerForm from "./pages/mainPage/playerForm.js";
+
 function App() {
-  fetch("https://escape-room-server.herokuapp.com/riddles")
-    .then((response) => response.json())
-    .then((data) => console.log(data));
   return (
     <div className="App">
-      <p>Start of escape room</p>
+      <p>Escape Room</p>
+      <PlayerForm />
     </div>
   );
 }

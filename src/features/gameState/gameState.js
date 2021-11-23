@@ -12,7 +12,8 @@ export const gameSlice = createSlice({
       state.playerName = action.payload;
     },
     addRiddles: (state, action) => {
-      state.riddles += action.payload;
+      console.log(action.payload);
+      state.riddles.push(action.payload);
     }
   }
 });
