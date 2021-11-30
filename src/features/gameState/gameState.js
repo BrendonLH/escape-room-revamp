@@ -5,8 +5,7 @@ export const gameSlice = createSlice({
   initialState: {
     // setup random name generator for players with no name input
     playerName: "Guest",
-    score: 0,
-    riddles: []
+    score: 0
   },
   reducers: {
     addPlayer: (state, action) => {
@@ -14,7 +13,7 @@ export const gameSlice = createSlice({
     },
     addRiddles: (state, action) => {
       console.log(action.payload);
-      state.riddles.push(action.payload);
+      state.riddles = action.payload.message;
     }
   }
 });
