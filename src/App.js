@@ -1,7 +1,6 @@
 import PlayerForm from "./pages/mainPage/playerForm.js";
 import "./pages/mainPage/main.scss";
 import HowTo from "./pages/mainPage/howToPlay.js";
-
 function App() {
   return (
     <div className="App">
