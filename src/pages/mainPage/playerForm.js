@@ -1,11 +1,10 @@
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { addPlayer, addRiddles } from "../../features/gameState/gameState.js";
 import "./main.scss";
+import { Link } from "react-router-dom";
 const riddleURL = "https://escape-room-server.herokuapp.com/riddles";
 
 function PlayerForm() {
-  const game = useSelector((state) => state.game);
-  console.log(game);
   const dispatch = useDispatch();
   function handleChange(event) {
     dispatch(addPlayer(event.target.value));
@@ -24,7 +23,9 @@ function PlayerForm() {
           placeholder="enter playername"
         />
       </form>
-      <button onClick={handleSubmit}>Submit</button>
+      <Link to="/game">
+        <button onClick={handleSubmit}>Submit</button>
+      </Link>
     </div>
   );
 }
