@@ -2,8 +2,10 @@
 
 .App {
   font-family: 'Eater', cursive;
-  h1 {
+  h1{
     font-size: 5em;
+    color:#ff6700;
+    -webkit-text-stroke: 2px black;   
   }
   .howTo {
     font-size: 2em;
