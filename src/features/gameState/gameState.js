@@ -1,5 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit";
-
 export const gameSlice = createSlice({
   name: "game",
   initialState: {
@@ -14,11 +13,15 @@ export const gameSlice = createSlice({
     addRiddles: (state, action) => {
       console.log(action.payload);
       state.riddles = action.payload.message;
+    },
+    correctAnswer: (state, action) => {
+      state.score += 100;
+      state.riddles.riddlesArr.shift();
     }
   }
 });
 
 // Action creators are generated for each case reducer function
-export const { addPlayer, addRiddles } = gameSlice.actions;
+export const { addPlayer, addRiddles, correctAnswer } = gameSlice.actions;
 
 export default gameSlice.reducer;
