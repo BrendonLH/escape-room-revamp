@@ -6,6 +6,7 @@ const riddleURL = "https://escape-room-server.herokuapp.com/riddles";
 
 function PlayerForm() {
   const dispatch = useDispatch();
+
   function handleChange(event) {
     dispatch(addPlayer(event.target.value));
   }
