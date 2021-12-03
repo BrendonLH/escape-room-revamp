@@ -9,11 +9,13 @@ function PlayerForm() {
   function handleChange(event) {
     dispatch(addPlayer(event.target.value));
   }
-  function handleSubmit(event) {
+
+  function getRiddles() {
     return fetch(riddleURL)
       .then((res) => res.json())
       .then((data) => dispatch(addRiddles(data)));
   }
+  getRiddles();
   return (
     <div className="playerForm">
       <form>
@@ -24,7 +26,7 @@ function PlayerForm() {
         />
       </form>
       <Link to="/game">
-        <button onClick={handleSubmit}>Submit</button>
+        <button>Submit</button>
       </Link>
     </div>
   );
