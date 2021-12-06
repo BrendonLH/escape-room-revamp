@@ -6,37 +6,54 @@ import { useState } from "react";
 export default function Game() {
   const game = useSelector((state) => state.game);
   const riddle = game.riddles.riddlesArr[0];
-  const riddleAnswer = riddle.answer;
+  
 
   const [playerAnswer, setAnswer] = useState("");
   const dispatch = useDispatch();
 
+
   // handle the game logic/dispatch
+
   const onHandleSubmit = (e) => {
-    e.preventDefault();
-    if(playerAnswer.toLowerCase() === riddleAnswer.toLowerCase()) {
-      alert('correct');
-      dispatch(correctAnswer());
+    let riddleAnswer = riddle.answer;
+    if(game.riddles.riddlesArr.length > 0) {
+      e.preventDefault();
+      if(playerAnswer.toLowerCase() === riddleAnswer.toLowerCase()) {
+        alert('correct');
+        dispatch(correctAnswer());
+      }
+      else {
+        alert('incorrect');
+        dispatch(incorrectAnswer());
+      }
+      setAnswer("");
+  }
+  else {
+    alert('no more riddles');
+  }
+}
+function testFunc() {
+    if(game.riddles.riddlesArr.length > 0) {
+      return <div>
+        <h1>Welcome {game.playerName.charAt(0).toUpperCase() + game.playerName.slice(1)}</h1>
+        {<p>{riddle.riddle}</p>}
+        <form onSubmit={onHandleSubmit}>
+          <input
+            onChange={(e) => setAnswer(e.target.value)}
+            value={playerAnswer}
+            type="text"
+          />
+          <button type="submit">Search</button>
+        </form>
+      </div>
     }
     else {
-      alert('incorrect');
+      return <h1>nothing in arrayRiddles</h1>
     }
-    setAnswer("");
-  };
+}
 
-  console.log(game);
-  return (
-    <div>
-      <h1>Game Page</h1>
-      {<p>{riddle.riddle}</p>}
-      <form onSubmit={onHandleSubmit}>
-        <input
-          onChange={(e) => setAnswer(e.target.value)}
-          value={playerAnswer}
-          type="text"
-        />
-        <button type="submit">Search</button>
-      </form>
-    </div>
-  );
+    return (
+      <div>{testFunc()}</div>
+     
+    );
 }
