@@ -1,45 +1,70 @@
 @import url('https://fonts.googleapis.com/css2?family=Eater&display=swap');
 
 .App {
+  height: 100vh;
+  width: 100vw;
   font-family: 'Eater', cursive;
+  color:#ff6700;
+    -webkit-text-stroke: .5px black;  
   h1{
     font-size: 5em;
     color:#ff6700;
     -webkit-text-stroke: 2px black;   
   }
-  .howTo {
-    font-size: 2em;
-    h3{
-      text-align: center;
-    }
-    li {
-      list-style-type: none;
-    }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  input {
+    padding: 1.5rem;
+    text-align: center;
+    border: none;
+    border-radius: 20%;
+    background: rgba(158, 252, 170, 0.263);
+    height: 5vh;
   }
+  input:focus {
+    outline: none;
+  }
+  
+  input::-webkit-input-placeholder {
+    color: rgba(255, 0, 255, 0.274) !important;  
+    }
+     
+  input:-moz-placeholder { /* Firefox 18- */
+    color: rgba(255, 0, 255, 0.274) !important;  
+    }
+     
+  input::-moz-placeholder {  /* Firefox 19+ */
+      color: rgba(255, 0, 255, 0.274) !important;   
+    }
+     
+  input:-ms-input-placeholder {  
+      color: rgba(255, 0, 255, 0.274) !important;  
+    }
+  
   .playerForm {
     display: flex;
     flex-direction: column;
-    input {
-      text-align: center;
-      border-style: none;
+    align-items: center;
+
   }
+  button {
+    border: none;
+    background-color:#2bff002d;
+    height: 120%;
+    border-radius: 50%;
+  }
+  li {
+    list-style-type: none;
+  }
+
+
 }
 
-  height: 100vh;
-  display: flex;
-  flex-direction:column;
-  justify-content: center;
-  align-items: center;
-}
-
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 640px) {
   .App {
-    h1{
-      font-size: 2em;
-    }
-    .howTo {
-      font-size: 1em;
-      text-align: center;
-    }
+  h1 {
+    font-size: 3em;
   }
+}
 }
