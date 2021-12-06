@@ -1,6 +1,7 @@
 import { useSelector, useDispatch } from "react-redux";
 import { correctAnswer, incorrectAnswer } from "../../features/gameState/gameState.js";
 import { useState } from "react";
+import ScorePage from "../scorePage/scorePage.js";
 
 
 export default function Game() {
@@ -48,7 +49,7 @@ function testFunc() {
       </div>
     }
     else {
-      return <h1>Game Over!</h1>
+      return <ScorePage />
     }
 }
 
