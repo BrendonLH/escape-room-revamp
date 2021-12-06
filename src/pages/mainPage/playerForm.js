@@ -20,14 +20,12 @@ function PlayerForm() {
   return (
     <div className="playerForm">
       <form>
-        <input
-          required
-          onChange={handleChange}
-          placeholder="enter playername"
-        />
+        <input required onChange={handleChange} placeholder="enter you name!" />
       </form>
       <Link to="/game">
-        <button type='submit'>Enter</button>
+        <button className="btn" type="submit">
+          Enter
+        </button>
       </Link>
     </div>
   );

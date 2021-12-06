@@ -4,7 +4,13 @@ import HowTo from "./pages/mainPage/howToPlay.js";
 function App() {
   return (
     <div className="App">
-      <h1 id='main-title'>Escape Room</h1>
+      <div class="ghost">
+        <div class="eye"></div>
+        <div class="eye"></div>
+        <div class="mouth"></div>
+      </div>
+
+      <h1 id="main-title">Escape Room</h1>
       <PlayerForm className="playerForm" />
       <HowTo className="howTo" />
     </div>
