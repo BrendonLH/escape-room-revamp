@@ -48,7 +48,7 @@ function testFunc() {
       </div>
     }
     else {
-      return <h1>nothing in arrayRiddles</h1>
+      return <h1>Game Over!</h1>
     }
 }
 
