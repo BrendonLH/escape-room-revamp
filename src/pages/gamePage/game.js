@@ -1,36 +1,42 @@
 import { useSelector, useDispatch } from "react-redux";
-import { correctAnswer } from "../../features/gameState/gameState.js";
+import { correctAnswer, incorrectAnswer } from "../../features/gameState/gameState.js";
+import { useState } from "react";
+
+
 export default function Game() {
   const game = useSelector((state) => state.game);
   const riddle = game.riddles.riddlesArr[0];
-  // console.log(game);
+  const riddleAnswer = riddle.answer;
 
+  const [playerAnswer, setAnswer] = useState("");
   const dispatch = useDispatch();
-  let playerAnswer = "";
 
-  function handleChange(event) {
-    // dispatch(addPlayer(event.target.value));
-    playerAnswer = event.target.value;
-    return playerAnswer;
-  }
-  function submitAnswer(event) {
-    console.log(playerAnswer);
-    dispatch(correctAnswer());
-  }
+  // handle the game logic/dispatch
+  const onHandleSubmit = (e) => {
+    e.preventDefault();
+    if(playerAnswer.toLowerCase() === riddleAnswer.toLowerCase()) {
+      alert('correct');
+      dispatch(correctAnswer());
+    }
+    else {
+      alert('incorrect');
+    }
+    setAnswer("");
+  };
 
   console.log(game);
   return (
     <div>
       <h1>Game Page</h1>
       {<p>{riddle.riddle}</p>}
-      <form>
+      <form onSubmit={onHandleSubmit}>
         <input
-          required
-          onChange={handleChange}
-          placeholder="enter playername"
+          onChange={(e) => setAnswer(e.target.value)}
+          value={playerAnswer}
+          type="text"
         />
+        <button type="submit">Search</button>
       </form>
-      <button onClick={submitAnswer}>Submit</button>
     </div>
   );
 }

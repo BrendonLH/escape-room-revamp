@@ -11,17 +11,19 @@ export const gameSlice = createSlice({
       state.playerName = action.payload;
     },
     addRiddles: (state, action) => {
-      console.log(action.payload);
       state.riddles = action.payload.message;
     },
     correctAnswer: (state, action) => {
       state.score += 100;
+      state.riddles.riddlesArr.shift();
+    },
+    incorrectAnswer: (state) => {
       state.riddles.riddlesArr.shift();
     }
   }
 });
 
 // Action creators are generated for each case reducer function
-export const { addPlayer, addRiddles, correctAnswer } = gameSlice.actions;
+export const { addPlayer, addRiddles, correctAnswer, incorrectAnswer } = gameSlice.actions;
 
 export default gameSlice.reducer;
