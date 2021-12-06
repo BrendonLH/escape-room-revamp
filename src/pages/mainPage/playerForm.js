@@ -27,7 +27,7 @@ function PlayerForm() {
         />
       </form>
       <Link to="/game">
-        <button>Submit</button>
+        <button type='submit'>Enter</button>
       </Link>
     </div>
   );
