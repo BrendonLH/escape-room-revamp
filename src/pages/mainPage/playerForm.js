@@ -23,9 +23,13 @@ function PlayerForm() {
         <input required onChange={handleChange} placeholder="enter you name!" />
       </form>
       <Link to="/game">
-        <button className="btn" type="submit">
-          Enter
-        </button>
+        <div class="door-frame">
+          <div class="door">
+            <div class="door-placard">Enter</div>
+            <div class="knob"></div>
+            <div class="door-placard"></div>
+          </div>
+        </div>
       </Link>
     </div>
   );
