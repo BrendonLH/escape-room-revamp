@@ -20,7 +20,7 @@ function PlayerForm() {
   return (
     <div className="playerForm">
       <form>
-        <input required onChange={handleChange} placeholder="enter you name!" />
+        <input required onChange={handleChange} placeholder="enter you're name!" />
       </form>
       <Link to="/game">
         <div class="door-frame">

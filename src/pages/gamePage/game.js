@@ -2,6 +2,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { correctAnswer, incorrectAnswer } from "../../features/gameState/gameState.js";
 import { useState } from "react";
 import ScorePage from "../scorePage/scorePage.js";
+import './game.scss';
 
 
 export default function Game() {
@@ -20,11 +21,10 @@ export default function Game() {
     if(game.riddles.riddlesArr.length > 0) {
       e.preventDefault();
       if(playerAnswer.toLowerCase() === riddleAnswer.toLowerCase()) {
-        alert('correct');
         dispatch(correctAnswer());
+        
       }
       else {
-        alert('incorrect');
         dispatch(incorrectAnswer());
       }
       setAnswer("");
@@ -33,7 +33,7 @@ export default function Game() {
     alert('no more riddles');
   }
 }
-function testFunc() {
+function nextRiddle() {
     if(game.riddles.riddlesArr.length > 0) {
       return <div>
         <h1>Welcome {game.playerName.charAt(0).toUpperCase() + game.playerName.slice(1)}</h1>
@@ -44,7 +44,7 @@ function testFunc() {
             value={playerAnswer}
             type="text"
           />
-          <button type="submit">Search</button>
+          <button type="submit">Answer</button>
         </form>
       </div>
     }
@@ -54,7 +54,9 @@ function testFunc() {
 }
 
     return (
-      <div>{testFunc()}</div>
+      <div className='Game'>{nextRiddle()}
+      </div>
+      
      
     );
 }

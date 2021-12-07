@@ -1,0 +1,13 @@
+// create way for more ghosts to spawn as you get correct answers
+@import url('https://fonts.googleapis.com/css2?family=Eater&display=swap');
+.Game {
+    color: white;
+    background-color:#212121; 
+    width: 100vw;
+    height: 100vh;
+    * {
+        font-family: 'Eater', cursive;
+        text-align: center;
+    }
+    
+}
