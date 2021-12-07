@@ -18,7 +18,6 @@ export default function Game() {
 
   const onHandleSubmit = (e) => {
     let riddleAnswer = riddle.answer;
-    let ghosts = [1,2,3,4,5]
     if(game.riddles.riddlesArr.length > 0) {
       e.preventDefault();
       if(playerAnswer.toLowerCase() === riddleAnswer.toLowerCase()) {
@@ -39,11 +38,6 @@ function nextRiddle() {
       return <div>
         <h1>Welcome {game.playerName.charAt(0).toUpperCase() + game.playerName.slice(1)}</h1>
         {<p>{riddle.riddle}</p>}
-        <div class="ghost">
-        <div class="eye"></div>
-        <div class="eye"></div>
-        <div class="mouth"></div>
-      </div>
         <form onSubmit={onHandleSubmit}>
           <input
             onChange={(e) => setAnswer(e.target.value)}

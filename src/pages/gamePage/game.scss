@@ -9,51 +9,5 @@
         font-family: 'Eater', cursive;
         text-align: center;
     }
-    .ghost{
-        display:flex;
-        justify-content:space-evenly;
-        height:15%;
-        width:5%;
-        background-color:rgba(158, 252, 170, 0.263);
-        border-top-left-radius:50%;
-        border-top-right-radius:80%;
-        border-bottom-left-radius:80%;
-        position: absolute;
-        animation: ghost-move 30s infinite;
-      }
-      .eye {
-        margin-top:30px;
-        padding-top:14px;
-        height:1em;
-        width:.75em;
-        background-color:black;
-        border-radius:50%;
-      }
-      .mouth {
-        position:absolute;
-        height:2.5em;
-        width:1.5em;
-        top:60%;
-        background-color:black;
-        border-radius:50%;
-      }
-      
-      @keyframes ghost-move {
-        0%   {left:0px; top:0px; opacity:1;}
-        10%  { opacity:0;}
-        15%  { opacity:1;}
-        25%  { left:80vw; top:50vh; opacity:0;}
-        35%  { opacity:1;}
-        50%  {left:100px; top:80vh; opacity:0;}
-        65%  { opacity:1;}
-        75%  {left:80vw; top:50vh;opacity:0;}
-        85%  { opacity:1;}
-        100% {left:0px; top:0px; opacity:0;}
-      }
-      @keyframes ghost-fade {
-        0% {opacity:0;}
-        50%{opacity:1;}
-        100% {opacity:0;}
-      }
     
 }
