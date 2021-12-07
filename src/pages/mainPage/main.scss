@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Eater&display=swap');
-// @import url('./img//scary_house.png');
 
 .App {
   * {
@@ -58,6 +57,7 @@
     flex-direction: column;
     align-items: center;
   }
+  
   
   .btn {
     outline:none;
@@ -180,9 +180,11 @@
 @media only screen and (max-width: 640px) {
   .App {
     background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
     background-image: url('./img//scary_house.png');
   h1 {
+    margin-left: 13vw;
     margin-top: 50%;
     font-size: 2.5em;
   }
@@ -205,37 +207,56 @@
     top:60%;
     
   }
-  .door-frame {
-    position: relative;
-    top: 100px;
-    left:5px;
-    height:100px;
-    width:50px;
-  }
-  .door {
-    height:100px;
-    width:50px;  
-  }
-  .door:hover {
-    width:45px;
-    height:99px;
-  }
   .knob {
-    left:36px;
-    height:10px;
-    width:10px;
-    border:1px solid;
+    display: none;
+  }
+  .door-frame, .door {
+    height: 50px;
+    width: 50px;
+    background-color: transparent;
+    border: none;
+    
   }
   .door-placard {
-    width:70%;
-    left:4px;
-    height:20px;
-    border-width:3px;  
+    color: white;
+    border: none;
+    font-size: 1rem;
   }
+  .playerForm, h1 {
+    position: relative;
+    right: 30px;
+  }
+  // .door-frame {
+  //   position: relative;
+  //   top: 100px;
+  //   left:5px;
+  //   height:100px;
+  //   width:50px;
+  // }
+  // .door {
+  //   height:100px;
+  //   width:50px;  
+  // }
+  // .door:hover {
+  //   width:45px;
+  //   height:99px;
+  // }
+  // .knob {
+  //   left:36px;
+  //   height:10px;
+  //   width:10px;
+  //   border:1px solid;
+  // }
+  // .door-placard {
+  //   width:70%;
+  //   left:4px;
+  //   height:20px;
+  //   border-width:3px;  
+  // }
   .howTo {
     position: relative;
     top: 100px;
-    font-size: .5em;
+    font-size: 1em;
   }
 }
 }
