@@ -6,7 +6,6 @@ const riddleURL = "https://escape-room-server.herokuapp.com/riddles";
 
 function PlayerForm() {
   const dispatch = useDispatch();
-
   function handleChange(event) {
     dispatch(addPlayer(event.target.value));
   }
@@ -22,15 +21,12 @@ function PlayerForm() {
       <form>
         <input required onChange={handleChange} placeholder="enter you're name!" />
       </form>
-      <Link to="/game">
-        <div class="door-frame">
-          <div class="door">
-            <div class="door-placard">Enter</div>
-            <div class="knob"></div>
-            <div class="door-placard"></div>
-          </div>
-        </div>
-      </Link>
+      <div className='tombstone'>
+        <Link className='link' to="/game">
+          <div className='inscription'>Enter</div>
+        </Link>
+      </div>
+      
     </div>
   );
 }
