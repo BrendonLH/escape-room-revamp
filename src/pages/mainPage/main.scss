@@ -1,37 +1,52 @@
 @import url('https://fonts.googleapis.com/css2?family=Eater&display=swap');
 
 .App {
+  background-color: rgb(54,69,79);
+
   * {
+    margin:auto;
+    background-color: rgb(54,69,79);
     font-family: 'Eater', cursive;
     text-align: center;
     a {
-      font-size: .5rem;
       color: black;
       text-decoration: none;
     }
   }
   height: 100vh;
-  width: 100vw;
+  // width: 100vw;
   color:#ff6700;
     -webkit-text-stroke: .5px black;  
   h1{
-    font-size: 5em;
+    font-size: 4rem;
     color:#ff6700;
     -webkit-text-stroke: 2px black;   
   }
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  input { 
-    color:#ff6700;
-    font-size: 2rem;
-    border: 2px solid #efa424 ;
-    box-shadow:0 2px #efa424;
-    border-radius: 20%;
-    background: rgba(158, 252, 170, 0.263);
-    height: 5vh;
+  #main-subtitle {
+    max-width: 150px;
+    color: rgba(158, 252, 170, 0.822);
+    background-color: transparent;
+    transform: skew(15deg, 15deg);
   }
+
+  input {
+    height: 50px;
+    color:#ff6700;
+    font-size: 1rem;
+    background: rgba(158, 252, 170, 0.263);
+
+  }
+  .howTo {
+    h3 {
+      width: 50%;
+      font-size: 30px;
+      border-bottom: 7px inset black;
+      border-right: 5px solid black;
+      border-left: 5px solid black;
+      border-radius:30%;
+    }
+  }
+
   input:focus {
     outline: none;
   }
@@ -51,81 +66,28 @@
   input:-ms-input-placeholder {  
       color: #ff660088 !important;  
     }
-  
-  .playerForm {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  
-  .btn {
-    outline:none;
-    border:none;
-    cursor:pointer;
-    position:relative;
-    background-color:rgba(158, 252, 170, 0.263);
-    color:#ff6700;
-    text-transform:uppercase;
-    letter-spacing:2px;
-    padding:15px 30px;
-    margin:0 auto;
-    border-radius:50%;
-    box-shadow:0 6px #efa424;
-    margin:2rem;
-  }
-  
-  .btn:hover {
-    box-shadow:0px 4px #efa424;
-    top:2px;
-  }
-  .btn:active {
-    box-shadow:none;
-    top:6px;
-  }
+
+
   li {
     list-style-type: none;
   }
-  // door
-  .door-frame {
-    margin-top: 10px;
-    height:200px;
+  .tombstone {
+    margin-top:15px;
+    height:150px;
     width:100px;
-    background-color:black;
-    border:4px solid #924500 ;
+    border:1px solid black;
+    background-color:gray;
+    border-top-left-radius:50%;
+    border-top-right-radius:50%; 
   }
-  .door {
-    display:flex;
-    flex-direction:column;
-    justify-content:space-evenly;
-    height:200px;
-    width:100px;
-    background-color:#924500;
-    
+  .inscription {
+    background-color: transparent;
+    height: 80%;
+    margin-top:15%;
+    text-align:center;
+    text-decoration:underline;
   }
-  .door:hover {
-    width:90px;
-    height:198px;
-    transform: skewY(-2deg);
-  }
-  .knob {
-    position:relative;
-    left:72px;
-    height:20px;
-    width:20px;
-    background-color:gold;
-    border-radius:50%;
-    border:1px solid;
-  }
-  .door-placard {
-    width:70%;
-    position:relative;
-    left:8px;
-    height:40px;
-    border-color:#b05500;
-    border-width:6px;  
-    border-style:inset;
-  }
+
   
   .ghost{
     display:flex;
@@ -179,18 +141,11 @@
 
 @media only screen and (max-width: 640px) {
   .App {
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-image: url('./img//scary_house.png');
-  h1 {
-    margin-left: 13vw;
-    margin-top: 50%;
-    font-size: 2.5em;
-  }
-  input {
-    font-size: 1rem;
-  }
+    background-color: rgb(54,69,79);
+    h1 {
+      padding-top: 100px;
+      font-size: 40px;
+    }
   .ghost {
     height:12%;
     width:15%;
@@ -207,29 +162,21 @@
     top:60%;
     
   }
-  .knob {
-    display: none;
+  .tombstone {
+    font-size:15px;
+    height:100px;
+    width:80px;
+    border:1px solid black;
+    background-color:gray;
+    border-top-left-radius:50%;
+    border-top-right-radius:50%; 
   }
-  .door-frame, .door {
-    height: 50px;
-    width: 50px;
+  .inscription {
     background-color: transparent;
-    border: none;
-    
-  }
-  .door-placard {
-    color: white;
-    border: none;
-    font-size: 1rem;
-  }
-  .playerForm, h1 {
-    position: relative;
-    right: 30px;
-  }
-  .howTo {
-    position: relative;
-    top: 80px;
-    font-size: .9em;
+    height: 80%;
+    margin-top:15%;
+    text-align:center;
+    text-decoration:underline;
   }
 }
 }
