@@ -19,14 +19,18 @@ function PlayerForm() {
   return (
     <div className="playerForm">
       <form>
-        <input required onChange={handleChange} placeholder="enter you're name!" />
+        <input
+          required
+          onChange={handleChange}
+          placeholder="enter you're name!"
+        />
       </form>
-      <div className='tombstone'>
-        <Link className='link' to="/game">
-          <div className='inscription'>Enter</div>
+      <div className="tombstone">
+        <Link className="link" to="/game">
+          <div className="inscription">Start</div>
         </Link>
+        <div className="dirt"></div>
       </div>
-      
     </div>
   );
 }
