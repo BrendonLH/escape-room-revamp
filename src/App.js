@@ -6,7 +6,7 @@ function App() {
     <div className="App">
       <div className="app-title">
         <h1 id="main-title">Escape Room</h1>
-        <h2 id="main-subtitle">Revamp</h2>
+        <h2 id="main-subtitle">graveyard</h2>
       </div>
       <PlayerForm className="playerForm" />
       <HowTo className="howTo" />
