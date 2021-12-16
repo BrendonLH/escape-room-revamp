@@ -25,11 +25,10 @@ function PlayerForm() {
           placeholder="enter you're name!"
         />
       </form>
-      <div className="tombstone">
-        <Link className="link" to="/game">
-          <div className="inscription">Start</div>
+      <div className="btn">
+        <Link to="/game">
+          <div className="link">Play</div>
         </Link>
-        <div className="dirt"></div>
       </div>
     </div>
   );

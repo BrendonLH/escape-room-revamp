@@ -34,18 +34,20 @@ export default function Game() {
     if (game.riddles.riddlesArr.length > 0) {
       return (
         <div>
-          <h1>
-            Welcome{" "}
-            {game.playerName.charAt(0).toUpperCase() + game.playerName.slice(1)}
-          </h1>
           {<p>{riddle.riddle}</p>}
           <form onSubmit={onHandleSubmit}>
             <input
+              placeholder="anwser here"
+              className="riddles"
               onChange={(e) => setAnswer(e.target.value)}
               value={playerAnswer}
               type="text"
             />
-            <button type="submit">Answer</button>
+            <button className="ghost" type="submit">
+              <div className="eye"></div>
+              <div className="eye"></div>
+              <div className="mouth"></div>
+            </button>
           </form>
         </div>
       );
@@ -57,11 +59,25 @@ export default function Game() {
   return (
     <div className="Game">
       {nextRiddle()}
-      <div className="ghost">
-        <div className="eye"></div>
-        <div className="eye"></div>
-        <div className="mouth"></div>
-      </div>
+      <footer>
+        <div className="tombstone">
+          <div className="inscription">JFK</div>
+        </div>
+        <div className="tombstone">
+          <div className="inscription">2Pac</div>
+        </div>
+        <div className="tombstone">
+          <div className="inscription">
+            {game.playerName.charAt(0).toUpperCase() + game.playerName.slice(1)}
+          </div>
+        </div>
+        <div className="tombstone">
+          <div className="inscription">Elvis</div>
+        </div>
+        <div className="tombstone">
+          <div className="inscription">MJ</div>
+        </div>
+      </footer>
     </div>
   );
 }
