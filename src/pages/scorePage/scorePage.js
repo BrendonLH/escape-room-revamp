@@ -4,8 +4,8 @@ import "./scorePage.scss";
 export default function ScorePage() {
   const gameEnd = useSelector((state) => state.game);
   console.log(gameEnd);
-  // const userPostURL = "https://escape-room-server.herokuapp.com/post";
-  const url = "http://localhost:8080/post";
+  const url= "https://escape-room-server.herokuapp.com/post";
+  // const url = "http://localhost:8080/post";
 
   // send userscore to the DB
   function postScore() {
