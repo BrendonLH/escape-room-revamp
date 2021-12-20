@@ -3,9 +3,11 @@ import { addPlayer, addRiddles } from "../../features/gameState/gameState.js";
 import "./main.scss";
 import { Link } from "react-router-dom";
 const riddleURL = "https://escape-room-server.herokuapp.com/riddles";
+// const riddleURL = "http://localhost:8080/riddles";
 
 function PlayerForm() {
   const dispatch = useDispatch();
+  
   function handleChange(event) {
     dispatch(addPlayer(event.target.value));
   }

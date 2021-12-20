@@ -17,6 +17,7 @@ export default function Game() {
   // handle the game logic/dispatch
 
   const onHandleSubmit = (e) => {
+    e.preventDefault();
     let riddleAnswer = riddle.answer;
     if (game.riddles.riddlesArr.length > 0) {
       e.preventDefault();

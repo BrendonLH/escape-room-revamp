@@ -19,7 +19,7 @@ export const gameSlice = createSlice({
     },
     incorrectAnswer: (state) => {
       state.riddles.riddlesArr.shift();
-    }
+    },
   }
 });
 
